@@ -42,7 +42,7 @@ CREATE TABLE TemasMusicales (
 INSERT INTO TemasMusicales (genero_id, artista, titulo, animo, clima, ocasion, imagen, duracion)
 VALUES
     -- Temas de género "Rock"
-    (1, 'Queen', 'Bohemian Rhapsody', 'Energético', 'Noche', 'Concierto', 'bohemian_rhapsody.jpg', 354),
+    (1, 'Queen', 'Bohemian Rhapsody', 'Energético', 'Noche', 'Concierto', 'Final_Project\frontend\src\Portadas\Rock_cover.jpg', 354),
     (1, 'Led Zeppelin', 'Stairway to Heaven', 'Melancólico', 'Lluvioso', 'Relax', 'stairway_to_heaven.jpg', 480),
     (1, 'The Rolling Stones', 'Paint It Black', 'Emocionante', 'Soleado', 'Viaje', 'paint_it_black.jpg', 215),
     (1, 'Nirvana', 'Smells Like Teen Spirit', 'Energético', 'Noche', 'Fiesta', 'smells_like_teen_spirit.jpg', 244),
