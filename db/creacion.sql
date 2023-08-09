@@ -24,6 +24,8 @@ INSERT INTO GenerosMusicales (id, nombre) VALUES
     (17, 'Salsa'),
     (18, 'Bachata');
 
+
+
 --@block
 CREATE TABLE TemasMusicales (
     id SERIAL PRIMARY KEY,
@@ -37,6 +39,28 @@ CREATE TABLE TemasMusicales (
     duracion INT,
     FOREIGN KEY (genero_id) REFERENCES GenerosMusicales(id)
 );
+
+--@block
+CREATE TABLE if NOT EXISTS Usuario (
+    id SERIAL PRIMARY KEY,    
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    password_hash CHAR(64) NOT NULL,
+    perfil VARCHAR(50),
+    amigos VARCHAR(100),
+    playlist_id VARCHAR(200),
+    FOREIGN KEY (playlist_id) REFERENCES Playlist(id)
+);
+
+--@block
+CREATE TABLE if NOT EXISTS Playlist (
+    id SERIAL PRIMARY KEY,    
+    nombre VARCHAR(100) NOT NULL,
+    imagen VARCHAR(200)
+);
+
+
+
 
 --@block
 INSERT INTO TemasMusicales (genero_id, artista, titulo, animo, clima, ocasion, imagen, duracion)
