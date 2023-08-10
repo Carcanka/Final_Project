@@ -3,6 +3,10 @@ import History from "../../assets/Vector.svg"
 import Bell from "../../assets/bell.svg"
 import CupidoMusical from "../../assets/cupido-musical-illustration.svg"
 import MusicalContextual from "../../assets/contextual-illustration.svg"
+// import Friends from "../../assets/friends.svg"
+// import HomeLogo from "../../assets/home.svg"
+// import Search from "../../assets/search.svg"
+// import User from "../../assets/user.svg"
 
 function Home() {
     return (
@@ -32,8 +36,14 @@ function Home() {
                             <p>Creamos la playlist perfecta para cualquier situación.</p>
                         </div>
                     </div>
+                    <div className="home-footer-container">
+                        aaaaa
+                    </div>
                 </div>
-
+            </div>
+            <div className="footer-container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore inventore corporis minima! Accusamus et perferendis molestiae ad numquam vitae. Atque possimus minus at in adipisci incidunt pariatur libero, impedit quo?
+                Nisi est, architecto et odit voluptatibus doloribus aliquam veritatis, accusantium consequatur aperiam rerum, blanditiis dicta adipisci iusto quidem id voluptas quibusdam natus officiis harum fugiat enim temporibus. Ex, porro et.
             </div>
         </>
     )
