@@ -5,7 +5,7 @@ const knex = require("knex")({
       port: 5432,
       user: "postgres",
       password: "Revolucion10/12",
-      database: "postgres",
+      database: "proyecto_final",
     //   ssl: true,
     //   sslmode: 'verify-full'
     },

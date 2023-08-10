@@ -1,6 +1,5 @@
 const { knex } = require("../db");
 
-
   exports.allCanciones = async (req, res) => {
     try {
       const canciones = await knex.select('*').from('temas_musicales');
