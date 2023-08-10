@@ -1,10 +1,10 @@
-CREATE TABLE GenerosMusicales (
+CREATE TABLE generos_musicales (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL
 );
 
 --@block
-INSERT INTO GenerosMusicales (id, nombre) VALUES
+INSERT INTO generos_musicales (id, nombre) VALUES
     (1, 'Rock'),
     (2, 'Pop'),
     (3, 'Hip Hop'),
@@ -24,8 +24,10 @@ INSERT INTO GenerosMusicales (id, nombre) VALUES
     (17, 'Salsa'),
     (18, 'Bachata');
 
+
+
 --@block
-CREATE TABLE TemasMusicales (
+CREATE TABLE temas_musicales (
     id SERIAL PRIMARY KEY,
     genero_id INT NOT NULL,
     artista VARCHAR(100) NOT NULL,
@@ -35,14 +37,39 @@ CREATE TABLE TemasMusicales (
     ocasion VARCHAR(100),
     imagen VARCHAR(200),
     duracion INT,
-    FOREIGN KEY (genero_id) REFERENCES GenerosMusicales(id)
+    FOREIGN KEY (genero_id) REFERENCES generos_musicales(id)
 );
 
 --@block
-INSERT INTO TemasMusicales (genero_id, artista, titulo, animo, clima, ocasion, imagen, duracion)
+CREATE TABLE if NOT EXISTS usuarios (
+    id SERIAL PRIMARY KEY,    
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    password_hash CHAR(64) NOT NULL,
+    perfil VARCHAR(50),
+    amigos VARCHAR(100)
+);
+
+--@block
+CREATE TABLE if NOT EXISTS playlists (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    usuarios_id INT,
+    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
+);
+--@block
+CREATE TABLE if NOT EXISTS canciones_playlist (
+    id SERIAL PRIMARY KEY,    
+    titulo_cancion INT,
+    FOREIGN KEY (titulo_cancion) REFERENCES temas_musicales(id),
+    playlist_id INT,
+    FOREIGN KEY (playlist_id) REFERENCES playlists(id)
+);
+--@block
+INSERT INTO temas_musicales (genero_id, artista, titulo, animo, clima, ocasion, imagen, duracion)
 VALUES
     -- Temas de género "Rock"
-    (1, 'Queen', 'Bohemian Rhapsody', 'Energético', 'Noche', 'Concierto', 'bohemian_rhapsody.jpg', 354),
+    (1, 'Queen', 'Bohemian Rhapsody', 'Energético', 'Noche', 'Concierto', 'Final_Project\frontend\src\Portadas\Rock_cover.jpg', 354),
     (1, 'Led Zeppelin', 'Stairway to Heaven', 'Melancólico', 'Lluvioso', 'Relax', 'stairway_to_heaven.jpg', 480),
     (1, 'The Rolling Stones', 'Paint It Black', 'Emocionante', 'Soleado', 'Viaje', 'paint_it_black.jpg', 215),
     (1, 'Nirvana', 'Smells Like Teen Spirit', 'Energético', 'Noche', 'Fiesta', 'smells_like_teen_spirit.jpg', 244),
