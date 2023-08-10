@@ -6,8 +6,8 @@ const { body } = require("express-validator");
 const secret = "encriptado";
 exports.secret = secret;
 exports.register = async (req, res, next) => {
-  const salt = await bcrypt.genSalt(10);
-  const hashContrasenia = await bcrypt.hash(req.body.password, salt);
+  // const salt = await bcrypt.genSalt(10);
+  const hashContrasenia = await bcrypt.hash(req.body.password, 10);
 
   await knex("usuarios").insert({ nombre:req.body.nombre, email:req.body.email, password_hash: hashContrasenia });
 
@@ -15,7 +15,7 @@ exports.register = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-  const salt = await bcrypt.genSalt(10);
+  // const salt = await bcrypt.genSalt(10);
   const { email, password } = req.body;
 
   const respuestaUsuarios = await knex("usuarios").where("email", email);
