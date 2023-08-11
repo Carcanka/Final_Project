@@ -9,7 +9,3 @@ authRoutes.post("/register", schema, mensaje, register);
 
 module.exports = authRoutes;
 
-// const response = await fetch('/api/some-protected-route', {
-//     method: 'GET',
-//     credentials: 'include', // Important: Include credentials (cookies)
-//   });
