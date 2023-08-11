@@ -25,7 +25,7 @@ exports.register = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-  // const salt = await bcrypt.genSalt(10);
+  // const salt = await bcrypt.genSalt(10);//
   const { email, password } = req.body;
 
   const respuestaUsuarios = await knex("usuarios").where("email", email);
