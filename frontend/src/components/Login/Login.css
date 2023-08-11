@@ -12,6 +12,7 @@
     flex-direction: column;
     position: relative;
     width: 100%;
+    height: 100%;
     /* margin: 5%; */
 }
 
@@ -58,15 +59,13 @@
     /* align-self: stretch; */
     border-radius: 0px 16px;
     background: var(--medios-tonos-gris-1, #E4E6E8);
-    margin-top: 250px;
     height: 50px;
     width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin: 350px 5% 25px 5%;
 }
 
 .login-olvidar-contrasenha{
     color: #26262E;
     font-size: large;
-    margin: 5% 15%
+    margin: auto;
 }
