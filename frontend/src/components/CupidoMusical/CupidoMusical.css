@@ -1,0 +1,35 @@
+.cupido-musical-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* margin: 5%; */
+}
+
+.cupido-musical-header{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: space-around;
+    margin: 5% 0;
+}
+
+.cupido-musical-header button{
+    border: none;
+    background-color: transparent;
+}
+
+.cupido-musical-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 16px;
+    background: #E4E6E8;
+    height: 50px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-color: transparent;
+}
+
