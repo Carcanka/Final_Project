@@ -13,17 +13,17 @@ function App() {
   return (
     <>
       <Inicio />
-      <div className="PEPITO">--------------------------------------------------</div>
+      <div className="PEPITO">-------------------------------------------------</div>
       <Register />
-      <div className="PEPITO">--------------------------------------------------</div>
+      <div className="PEPITO">-------------------------------------------------</div>
       <Login />
-      <div className="PEPITO">--------------------------------------------------</div>
+      <div className="PEPITO">-------------------------------------------------</div>
       <Home />
-      <div className="PEPITO">--------------------------------------------------</div>
+      <div className="PEPITO">-------------------------------------------------</div>
       <MusicaContextual />
-      <div className="PEPITO">--------------------------------------------------</div>
+      <div className="PEPITO">-------------------------------------------------</div>
       <CupidoMusical />
-      <div className="PEPITO">--------------------------------------------------</div>
+      <div className="PEPITO">-------------------------------------------------</div>
     </>
   )
 }
