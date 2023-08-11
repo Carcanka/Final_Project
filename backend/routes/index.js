@@ -2,6 +2,8 @@ const express = require("express");
 const routes = express.Router();
 const { allCanciones, filtroGeneros, filtroArtista, filtroTitulo, filtroAnimo, filtroClima, filtroOcasion } = require("../controllers");
 const { login, register } = require("../controllers/auth.controllers");
+const mensaje = require ("../validators")
+const schema = require ("../validators/user")
 
 routes.get("/musica", allCanciones);
 routes.get("/generos", filtroGeneros);
@@ -12,7 +14,6 @@ routes.get("/clima", filtroClima);
 routes.get("/ocasion", filtroOcasion);
 
 routes.get("/login", login);
-routes.post("/register", register);
-
+routes.post("/register", schema, mensaje, register);
 
 module.exports = routes;
