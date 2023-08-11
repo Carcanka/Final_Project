@@ -14,8 +14,8 @@ function App() {
       {/* <Register /> */}
       {/* <Login /> */}
       {/* <Home /> */}
-      {/* <Inicio /> */}
-      <MusicaContextual />
+      <Inicio />
+      {/* <MusicaContextual /> */}
     </>
   )
 }
