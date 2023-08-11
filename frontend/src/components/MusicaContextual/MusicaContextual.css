@@ -39,6 +39,23 @@
     align-items: flex-start;
 }
 
+.input-container h2{
+    text-align: center;
+}
+
+.input-container select{
+    display: flex;
+    width: 100%;
+    height: 48px;
+    padding: 0px 16px;
+    margin-top: 15px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 0px 16px;
+    border: 2px solid var(--medios-tonos-gris-5, #26262E);
+    background: var(--blanco, #FDFEFF);
+}
+
 .musica-contextual-input{
     display: flex;
     justify-content: flex-end;
@@ -49,6 +66,23 @@
     border-radius: 0px 16px;
     border: 2px solid var(--primario, #FF8E0A);
     margin: 10px 0;
+}
+
+.container-generos{
+    display: flex;
+    width: 90%;
+    margin: 10% 5%;
+    flex-wrap: wrap;
+}
+
+.genre-button{
+    border-radius: 0px 12px;
+    border: 1.5px solid var(--medios-tonos-gris-5, #26262E);
+    padding: 6px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 5px;
 }
 
 .musica-contextual-submit{
@@ -65,8 +99,3 @@
     margin-left: 5%;
 }
 
-.musica-contextual-olvidar-contrasenha{
-    color: #26262E;
-    font-size: large;
-    margin: 5% 15%
-}
