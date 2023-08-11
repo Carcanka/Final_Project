@@ -25,7 +25,7 @@ function MusicaContextual() {
     ];
     return (
         <>
-            <div className="header-container">
+            <div className="header-gradient">
             </div>
             <div className="musica-contextual-container">
                 <div className="musica-contextual-header">

@@ -4,6 +4,7 @@ import Register from "./components/Register/Register"
 import Home from "./components/Home/Home"
 import Inicio from "./components/Inicio/Inicio"
 import MusicaContextual from "./components/MusicaContextual/MusicaContextual"
+import CupidoMusical from "./components/CupidoMusical/CupidoMusical"
 import './App.css'
 
 function App() {
@@ -12,18 +13,17 @@ function App() {
   return (
     <>
       <Inicio />
-      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
-        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <div className="PEPITO">--------------------------------------------------</div>
       <Register />
-      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
-        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <div className="PEPITO">--------------------------------------------------</div>
       <Login />
-      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
-        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <div className="PEPITO">--------------------------------------------------</div>
       <Home />
-      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
-        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <div className="PEPITO">--------------------------------------------------</div>
       <MusicaContextual />
+      <div className="PEPITO">--------------------------------------------------</div>
+      <CupidoMusical />
+      <div className="PEPITO">--------------------------------------------------</div>
     </>
   )
 }
