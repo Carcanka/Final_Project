@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken");
-const { secret } = require("../controllers/auth.controller");
+const { secret } = require("../controllers/auth.controllers");
 
 const authMiddleware = (req, res, next) => {
-  const token = req.headers.authorization;
+  const token = req.cookies.authToken;
 
   if (!token) {
     return res.status(401).json({ mensjae: "acceso denegado" });
@@ -17,6 +17,7 @@ const authMiddleware = (req, res, next) => {
       return res.status(401).json({ mensjae: "token invalido" });
     }
   }
+  
 
   next();
 };

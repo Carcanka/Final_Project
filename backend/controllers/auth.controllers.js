@@ -3,10 +3,11 @@ const jwt = require("jsonwebtoken");
 const { knex } = require("../db");
 // const { body } = require("express-validator");
 
-const sendToken = (res, next, email, nombre) => {
-  const token = jwt.sign({ email, nombre }, secret);
-  res.json({ token });
-  next();
+const sendToken = (res, next, { id, email, nombre }) => {
+  const token = jwt.sign({ email, nombre, id }, secret);
+  res.cookie("authToken", token, { httpOnly: true, secure: true });
+  res.status(200);
+  res.json({ mensaje: "Ingreso de usuario correcto" });
 };
 
 const secret = "encriptado";
@@ -15,9 +16,12 @@ exports.register = async (req, res, next) => {
   const salt = await bcrypt.genSalt(10);
   const hashPassword = await bcrypt.hash(req.body.password, salt);
 
-  await knex("usuarios").insert({ nombre:req.body.nombre, email:req.body.email, password_hash: hashPassword });
 
-  sendToken(res, next, req.body.email, req.body.nombre);
+  const usuario = await knex("usuarios")
+    .insert({ ...req.body, password: hashPassword })
+    .returning("*");
+  sendToken(res, next, usuario[0]);
+
 };
 
 exports.login = async (req, res, next) => {
@@ -44,5 +48,5 @@ exports.login = async (req, res, next) => {
     return;
   }
 
-  sendToken(res, next, email, usuario.nombre);
+  sendToken(res, next, usuario);
 };
