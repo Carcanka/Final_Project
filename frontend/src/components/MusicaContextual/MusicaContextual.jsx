@@ -36,7 +36,8 @@ function MusicaContextual() {
                 <form action="">
                     <div className="input-container">
                         <h2>¿Cuál es la ocasión?</h2>
-                        <select id="ocasion" placeholder="Carmelo">
+                        <select id="ocasion">
+                            <option value="">Actividad</option>
                             <option value="fiesta">Fiesta</option>
                             <option value="amor">Amor</option>
                             <option value="viaje">Viaje</option>
@@ -51,6 +52,7 @@ function MusicaContextual() {
                     <div className="input-container">
                         <h2>¿Cómo te sientes?</h2>
                         <select id="animo">
+                            <option value="">Estado de Ánimo</option>
                             <option value="energetico">Energético</option>
                             <option value="emocionante">Emocionante</option>
                             <option value="animado">Animado</option>
@@ -71,6 +73,7 @@ function MusicaContextual() {
                     <div className="input-container">
                         <h2>¿Cómo está el clima?</h2>
                         <select id="clima">
+                            <option value="">Clima</option>
                             <option value="soleado">Soleado</option>
                             <option value="lluvioso">Lluvioso</option>
                             <option value="noche">Noche</option>
@@ -94,7 +97,7 @@ function MusicaContextual() {
                     </div>
 
 
-                    <input type="submit" className="musica-contextual-submit" value="Iniciar Sesión" />
+                    <input type="submit" className="musica-contextual-submit" value="Crear Playlist" />
                 </form>
             </div>
 

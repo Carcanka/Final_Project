@@ -11,11 +11,19 @@ function App() {
 
   return (
     <>
-      {/* <Register /> */}
-      {/* <Login /> */}
-      {/* <Home /> */}
       <Inicio />
-      {/* <MusicaContextual /> */}
+      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
+        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <Register />
+      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
+        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <Login />
+      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
+        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <Home />
+      <div className="PEPITO">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia rem fuga ducimus perspiciatis provident, magni voluptas neque voluptate? Praesentium et accusamus pariatur non velit aliquam eaque quo voluptate, inventore libero?
+        Iure eum iste maiores amet consectetur! Aliquid, velit? Sed corrupti debitis ex veniam dolore at inventore sunt nihil, optio enim laudantium modi asperiores ab corporis nobis quae a libero recusandae?</div>
+      <MusicaContextual />
     </>
   )
 }

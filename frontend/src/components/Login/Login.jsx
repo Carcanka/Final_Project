@@ -4,9 +4,9 @@ import Flecha from "../../assets/left-icon-placeholder.svg"
 function Login() {
     return (
         <>
-            <div className="header-container">
-            </div>
             <div className="login-container">
+                <div className="header-container">
+                </div>
                 <div className="login-header">
                     <button><img src={Flecha} alt="Ir atrás" /></button>
                     <h3>Iniciar Sesión</h3>
