@@ -36,7 +36,6 @@ exports.login = async (req, res, next) => {
     next();
     return;
   }
-  console.log(usuario);
   const passwordValida = await bcrypt.compare(
     password,
     usuario.password_hash,
