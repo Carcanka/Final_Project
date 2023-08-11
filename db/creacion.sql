@@ -1,3 +1,4 @@
+--@block
 CREATE TABLE generos_musicales (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL
@@ -24,8 +25,6 @@ INSERT INTO generos_musicales (id, nombre) VALUES
     (17, 'Salsa'),
     (18, 'Bachata');
 
-
-
 --@block
 CREATE TABLE temas_musicales (
     id SERIAL PRIMARY KEY,
@@ -45,7 +44,7 @@ CREATE TABLE if NOT EXISTS usuarios (
     id SERIAL PRIMARY KEY,    
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(200) NOT NULL,
-    password_hash CHAR(64) NOT NULL,
+    password_hash VARCHAR(64) NOT NULL,
     perfil VARCHAR(50),
     amigos VARCHAR(100)
 );
