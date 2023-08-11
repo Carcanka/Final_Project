@@ -3,14 +3,14 @@ import History from "../../assets/Vector.svg"
 import Bell from "../../assets/bell.svg"
 import CupidoMusical from "../../assets/cupido-musical-illustration.svg"
 import MusicalContextual from "../../assets/contextual-illustration.svg"
-// import Friends from "../../assets/friends.svg"
-// import HomeLogo from "../../assets/home.svg"
-// import Search from "../../assets/search.svg"
-// import User from "../../assets/user.svg"
+import Friends from "../../assets/friends.svg"
+import HomeLogo from "../../assets/home.svg"
+import Search from "../../assets/search.svg"
+import User from "../../assets/user.svg"
 
 function Home() {
     return (
-        <>
+        <div className="main-container-header">
             <div className="header-container">
             </div>
             <div className="home-container">
@@ -37,15 +37,28 @@ function Home() {
                         </div>
                     </div>
                     <div className="home-footer-container">
-                        aaaaa
+                        <button className="home-footer-container-item">
+                            <img src={HomeLogo} alt="" />
+                            <span>Inicio</span>
+                        </button>
+                        <button className="home-footer-container-item">
+                            <img src={Search} alt="" />
+                            <span>Buscador</span>
+                        </button>
+                        <button className="home-footer-container-item">
+                            <img src={User} alt="" />
+                            <span>Perfil</span>
+                        </button>
+                        <button className="home-footer-container-item">
+                            <img src={Friends} alt="" />
+                            <span>Amigos</span>
+                        </button>
                     </div>
                 </div>
             </div>
             <div className="footer-container">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore inventore corporis minima! Accusamus et perferendis molestiae ad numquam vitae. Atque possimus minus at in adipisci incidunt pariatur libero, impedit quo?
-                Nisi est, architecto et odit voluptatibus doloribus aliquam veritatis, accusantium consequatur aperiam rerum, blanditiis dicta adipisci iusto quidem id voluptas quibusdam natus officiis harum fugiat enim temporibus. Ex, porro et.
             </div>
-        </>
+        </div>
     )
 }
 

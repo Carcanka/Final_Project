@@ -2,6 +2,7 @@
 import Login from "./components/Login/Login"
 import Register from "./components/Register/Register"
 import Home from "./components/Home/Home"
+import Inicio from "./components/Inicio/Inicio"
 import './App.css'
 
 function App() {
@@ -9,9 +10,10 @@ function App() {
 
   return (
     <>
-      {/* <Register />
-      <Login /> */}
-      <Home />
+      {/* <Register /> */}
+      {/* <Login /> */}
+      {/* <Home /> */}
+      <Inicio />
     </>
   )
 }
