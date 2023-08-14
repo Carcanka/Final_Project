@@ -54,8 +54,7 @@
     display: flex;
     gap: 20px;
     position: relative;
-    bottom: 20px;
-    
+    bottom: 20px;    
 }
 
 .like button{
