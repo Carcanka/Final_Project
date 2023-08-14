@@ -9,7 +9,7 @@ import Home from './components/Home/Home';
 import Inicio from './components/Inicio/Inicio';
 import MusicaContextual from './components/MusicaContextual/MusicaContextual';
 import CupidoMusical from './components/CupidoMusical/CupidoMusical.jsx';
-//esto sera borrado
+
 const router = createBrowserRouter([
   {
     path: '/',
