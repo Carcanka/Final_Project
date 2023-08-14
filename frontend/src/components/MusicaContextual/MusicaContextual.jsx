@@ -1,5 +1,6 @@
 import "./MusicaContextual.css"
 import Flecha from "../../assets/left-icon-placeholder.svg"
+import { Link } from 'react-router-dom';
 
 
 function MusicaContextual() {
@@ -25,15 +26,16 @@ function MusicaContextual() {
     ];
     return (
         <>
-            <div className="header-gradient">
-            </div>
-            <div className="musica-contextual-container">
-                <div className="musica-contextual-header">
-                    <button><img src={Flecha} alt="Ir atrás" /></button>
-                    <h3>Musica Contextual</h3>
-                    <div></div>
-                </div>
-                <form action="">
+    <div className="musica-contextual-container">
+      <div className="header-gradient"></div>
+      <div className="musica-contextual-header">
+        <Link to="/home">
+          <button><img src={Flecha} alt="Ir atrás" /></button>
+        </Link>
+        <h3>Musica Contextual</h3>
+        <div></div>
+      </div>
+      <form action="">
                     <div className="input-container">
                         <h2>¿Cuál es la ocasión?</h2>
                         <select id="ocasion">

@@ -1,5 +1,6 @@
 import "./Inicio.css"
 import audnLogo from "../../assets/logo-large.svg"
+import {Link} from 'react-router-dom';
 
 function Inicio() {
     return (
@@ -11,8 +12,8 @@ function Inicio() {
                         <img src={audnLogo} alt="Auden Logo" className="audenLogo" />
                         <h2 className="slogan">Música a medida.</h2>
                         <div className="register-login-section">
-                            <button className="inicio-register-button">Registrarse Gratis</button>
-                            <button className="inicio-login-button">Iniciar Sesión</button>
+                            <button className="inicio-register-button"><Link to={`/register`}>Registrarse Gratis</Link></button>
+                            <button className="inicio-login-button"><Link to={`/login`}>Iniciar Sesión</Link></button>
                         </div>
                     </div>
                 </div>
