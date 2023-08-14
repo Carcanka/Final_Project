@@ -11,7 +11,7 @@ import User from "../../assets/user.svg"
 function Home() {
     return (
         <div className="main-container-header">
-            <div className="header-container">
+            <div className="header-gradient">
             </div>
             <div className="home-container">
                 <div className="home-header">
@@ -25,14 +25,14 @@ function Home() {
                     <div className="cupido-contextual-container">
                         <img src={CupidoMusical} alt="Cupido Musical Logo" />
                         <div className="home-div-info">
-                            <h2>Cupido Musical</h2>
+                            <h3 className="home-div-info-margin">Cupido Musical</h3>
                             <p>Tus artistas favoritos nunca van a dejarte con el corazón roto.</p>
                         </div>
                     </div>
                     <div className="cupido-contextual-container">
                         <img src={MusicalContextual} alt="Música Contextual Logo" />
                         <div className="home-div-info">
-                            <h2>Música Contextual</h2>
+                            <h3 className="home-div-info-margin">Música Contextual</h3>
                             <p>Creamos la playlist perfecta para cualquier situación.</p>
                         </div>
                     </div>
