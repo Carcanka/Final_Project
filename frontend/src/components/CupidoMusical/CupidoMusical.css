@@ -33,3 +33,42 @@
     border-color: transparent;
 }
 
+.cupido-musical-image-like-dislike{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 25% auto 20% auto;
+}
+
+.cupido-musical-image img{
+    border-radius: 0px 48px;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.like-cross-container{
+    display: flex;
+}
+
+.like button{
+    border-radius: 32px;
+    border: none;
+    width: 64px;
+    height: 64px;
+    background: #FDFEFF;
+    box-shadow: 1.7777777910232544px 1.7777777910232544px 3.555555582046509px 0px rgba(8, 8, 17, 0.08), 0px 0px 5.333333492279053px 0px rgba(8, 8, 17, 0.04);
+    cursor: pointer;
+}
+
+.cross button{
+    border-radius: 32px;
+    border: none;
+    width: 64px;
+    height: 64px;
+    background: #FDFEFF;
+    box-shadow: 1.7777777910232544px 1.7777777910232544px 3.555555582046509px 0px rgba(8, 8, 17, 0.08), 0px 0px 5.333333492279053px 0px rgba(8, 8, 17, 0.04);
+    cursor: pointer;
+}
