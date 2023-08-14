@@ -41,6 +41,8 @@
     border-radius: 0px 16px;
     border: 2px solid var(--primario, #FF8E0A);
     margin: 10px 0;
+    padding-left: 15px;
+    font-size: 1.5rem;
 }
 
 .login-submit{
@@ -61,4 +63,9 @@
     align-items: center;
     color: #26262E;
     font-size: large;
+}
+
+.footer-link {
+    display:flex ;
+    justify-content: center;
 }

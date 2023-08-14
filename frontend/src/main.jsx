@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Inicio from './components/Inicio/Inicio';
 import MusicaContextual from './components/MusicaContextual/MusicaContextual';
 import CupidoMusical from './components/CupidoMusical/CupidoMusical.jsx';
+import RegisterDatos from './components/RegisterDatos/RegisterDatos.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register />,
+  },
+
+  {
+    path: '/registerdatos',
+    element: <RegisterDatos/>,
   },
   {
     path: '/home',
