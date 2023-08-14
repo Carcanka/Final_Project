@@ -10,8 +10,10 @@ function Inicio() {
                     <div className="logos-logins">
                         <img src={audnLogo} alt="Auden Logo" className="audenLogo" />
                         <h2 className="slogan">Música a medida.</h2>
-                        <button className="inicio-register-button">Registrarse Gratis</button>
-                        <button className="inicio-login-button">Iniciar Sesión</button>
+                        <div className="register-login-section">
+                            <button className="inicio-register-button">Registrarse Gratis</button>
+                            <button className="inicio-login-button">Iniciar Sesión</button>
+                        </div>
                     </div>
                 </div>
             </div>

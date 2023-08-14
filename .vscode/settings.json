@@ -1,25 +1,16 @@
 {
-    "sqltools.connections": [
-        {
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 5432,
-            "driver": "PostgreSQL",
-            "name": "proyecto_final",
-            "database": "proyecto_final",
-            "username": "postgres"
-        },
-        {
-            "pgOptions": {
-                "ssl": true
-            },
-            "previewLimit": 50,
-            "server": "ep-shrill-waterfall-99261634.us-east-2.aws.neon.tech",
-            "port": 5432,
-            "driver": "PostgreSQL",
-            "name": "Proyecto Final",
-            "database": "proyecto_final",
-            "username": "Carcanka"
-        }
-    ]
+  "sqltools.connections": [
+    {
+      "pgOptions": {
+        "ssl": true
+      },
+      "previewLimit": 50,
+      "server": "ep-shrill-waterfall-99261634.us-east-2.aws.neon.tech",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Proyecto Final",
+      "username": "Carcanka",
+      "database": "proyecto_final"
+    }
+  ]
 }
