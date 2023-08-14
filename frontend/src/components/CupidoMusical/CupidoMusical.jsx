@@ -1,17 +1,22 @@
-import "./CupidoMusical.css";
-import Flecha from "../../assets/left-icon-placeholder.svg";
-import Like from "../../assets/like.svg";
-import Dislike from "../../assets/cross.svg";
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './CupidoMusical.css';
+import Flecha from '../../assets/left-icon-placeholder.svg';
+import Like from '../../assets/like.svg';
+import Dislike from '../../assets/cross.svg';
 
 function CupidoMusical() {
     return (
         <>
             <div className="cupido-musical-container">
-                <div className="header-gradient"></div>
+
                 <div className="cupido-musical-header">
-                    <button>
-                        <img src={Flecha} alt="Ir atrás" />
-                    </button>
+                <div className="header-gradient"></div>
+                    <Link to={"/home"}>                       
+                            <img src={Flecha} alt="Ir atrás" />                        
+                    </Link>
+
                     <h3>Cupido Musical</h3>
                     <div></div>
                 </div>

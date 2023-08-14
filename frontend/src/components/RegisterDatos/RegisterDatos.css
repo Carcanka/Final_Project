@@ -1,4 +1,4 @@
-.register-container{
+.login-container{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -7,12 +7,7 @@
     /* margin: 5%; */
 }
 
-.register-container h1{
-    text-align: center;
-    color: #26262E;
-}
-
-.register-header{
+.login-header{
     display: flex;
     align-items: center;
     /* flex-shrink: 0; */
@@ -22,21 +17,24 @@
     justify-content: space-around;
     margin: 5% 0;
 }
-
-.register-header button{
+.register-title{
+    display: flex;
+    text-align: center;
+}
+.login-header button{
     border: none;
     background-color: transparent;
 }
 
-.register-form{
+.input-container{
     display: flex;
-    flex-direction: column;
-    /* margin: 10% 0; */
     width: 90%;
-    margin: 10% 5%
+    margin: 10% 5%;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.register-input{
+.login-input{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -50,17 +48,38 @@
     font-size: 1.5rem;
 }
 
-.register-form span{
-    color: gray;
-}
-
-.register-submit{
+.login-submit{
     display: flex;
+    justify-content: center;
     align-items: center;
+    /* align-self: stretch; */
     border-radius: 0px 16px;
     background: var(--medios-tonos-gris-1, #E4E6E8);
-    margin-top: 450px;
     height: 50px;
-    justify-content: center;
+    width: 90%;
+    margin: 350px 5% 25px 5%;
 }
 
+.reset-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #26262E;
+    font-size: large;
+}
+
+.password-text {
+    display: none;
+}
+
+.conditions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.footer-link {
+    display:flex ;
+    justify-content: center;
+}
