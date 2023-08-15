@@ -18,25 +18,6 @@ function App() {
       </header>
     </div>
   );
-  <>
-    <Inicio />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <Register />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <Login />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <Home />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <MusicaContextual />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <CupidoMusical />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <Buscador />
-    <div className="PEPITO">-------------------------------------------------</div>
-    <Playlist />
-    <div className="PEPITO">-------------------------------------------------</div>
-  </>
-  )
 }
 
 export default App;
