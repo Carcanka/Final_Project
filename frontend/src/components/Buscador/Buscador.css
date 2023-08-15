@@ -42,10 +42,9 @@
     height: 100px;
     align-items: center;
     gap: 16px;
-    flex-shrink: 0;
-    position: fixed;
+    flex-shrink: 0;    
     justify-content: space-around;
-    /* margin-top: 110%; */
+    
 }
 
 .buscador-footer-container-item{
