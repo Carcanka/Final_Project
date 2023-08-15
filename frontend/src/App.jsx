@@ -5,6 +5,8 @@ import Home from "./components/Home/Home"
 import Inicio from "./components/Inicio/Inicio"
 import MusicaContextual from "./components/MusicaContextual/MusicaContextual"
 import CupidoMusical from "./components/CupidoMusical/CupidoMusical"
+import Buscador from "./components/Buscador/Buscador"
+import Playlist from "./components/Playlist/Playlist"
 import './App.css'
 
 function App() {
@@ -23,6 +25,10 @@ function App() {
       <MusicaContextual />
       <div className="PEPITO">-------------------------------------------------</div>
       <CupidoMusical />
+      <div className="PEPITO">-------------------------------------------------</div>
+      <Buscador />
+      <div className="PEPITO">-------------------------------------------------</div>
+      <Playlist />
       <div className="PEPITO">-------------------------------------------------</div>
     </>
   )
