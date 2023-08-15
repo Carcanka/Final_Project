@@ -9,6 +9,9 @@ import Home from './components/Home/Home';
 import Inicio from './components/Inicio/Inicio';
 import MusicaContextual from './components/MusicaContextual/MusicaContextual';
 import CupidoMusical from './components/CupidoMusical/CupidoMusical.jsx';
+import RegisterDatos from './components/RegisterDatos/RegisterDatos.jsx';
+import Buscador from './components/Buscador/Buscador.jsx';
+import Playlist from './components/Playlist/Playlist.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,10 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
+    path: '/registerdatos',
+    element: <RegisterDatos />,
+  },
+  {
     path: '/home',
     element: <Home />,
   },
@@ -31,10 +38,17 @@ const router = createBrowserRouter([
     path: '/musica-contextual',
     element: <MusicaContextual />,
   },
-
   {
     path: '/cupido-musical',
     element: <CupidoMusical />,
+  },
+  {
+    path: '/buscador',
+    element: <Buscador />,
+  },
+  {
+    path: '/playlist',
+    element: <Playlist />,
   },
 ]);
 

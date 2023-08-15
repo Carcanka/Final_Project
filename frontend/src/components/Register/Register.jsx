@@ -9,7 +9,7 @@ function Register() {
       <div className="register-container">
         <div className="header-gradient"></div>
         <div className="register-header">
-          <Link to="/home">
+          <Link to="/">
             <button><img src={Flecha} alt="Ir atrás" /></button>
           </Link>
           <h3>Crear Cuenta</h3>
