@@ -12,6 +12,8 @@ import CupidoMusical from './components/CupidoMusical/CupidoMusical.jsx';
 import RegisterDatos from './components/RegisterDatos/RegisterDatos.jsx';
 import Buscador from './components/Buscador/Buscador.jsx';
 import Playlist from './components/Playlist/Playlist.jsx';
+import LogOut from "./components/LogOut/LogOut.jsx"
+import Perfil from "./components/Perfil/Perfil.jsx"
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
   {
     path: '/playlist',
     element: <Playlist />,
+  },
+  {
+    path: '/logout',
+    element: <LogOut />,
+  },
+  {
+    path: '/perfil',
+    element: <Perfil />,
   },
 ]);
 

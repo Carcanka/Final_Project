@@ -1,0 +1,93 @@
+.user-perfil-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* margin: 5%; */
+}
+
+.perfil-img-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-img-info-container img{
+    width: 152px;
+    height: 152px;
+    flex-shrink: 0;
+    border-radius: 92px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    box-shadow: 4px 2px 12px 0px rgba(8, 8, 17, 0.08), 0px 0px 8px 0px rgba(8, 8, 17, 0.08);
+}
+
+.perfil-mis-playlists-container{
+    display: flex;
+    margin: 10% 5%;
+    justify-content: space-around;
+}
+
+.perfil-crear-playlists-button{
+    padding: 4px 8px;
+    border-radius: 0px 8px;
+    background-color: #FF8E0A;
+    color: white;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.perfil-playlists-container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.perfil-footer-container{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    position: relative;
+    justify-content: space-around;
+    /* margin-top: 110%; */
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+}
+
+.perfil-playlist-card{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 2.5%;
+    text-align: center;
+}
+
+.perfil-playlist-card img{
+    border-radius: 0px 40px;
+}
+
+.perfil-footer-container-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border: none;
+    background-color: transparent;
+}
+
+.perfil-footer-container-item img{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+.perfil-footer-container-item span{
+    font-size: 1rem;
+}

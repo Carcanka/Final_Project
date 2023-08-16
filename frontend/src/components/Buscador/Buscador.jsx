@@ -31,22 +31,22 @@ function Buscador() {
                 </form>
 
                 <div className="buscador-footer-container">
-                <Link to="/home" className="buscador-footer-container-item">
-              <img src={HomeLogo} alt="" />
-              <span>Inicio</span>
-            </Link>
-            <Link to="/buscador" className="buscador-footer-container-item">
-              <img src={Search} alt="" />
-              <span>Buscador</span>
-            </Link>
-            <Link to="/profile" className="buscador-footer-container-item">
-              <img src={User} alt="" />
-              <span>Perfil</span>
-            </Link>
-            <Link to="/friends" className="buscador-footer-container-item">
-              <img src={Friends} alt="" />
-              <span>Amigos</span>
-            </Link>
+                    <Link to="/home" className="buscador-footer-container-item">
+                        <img src={HomeLogo} alt="" />
+                        <span>Inicio</span>
+                    </Link>
+                    <Link to="/buscador" className="buscador-footer-container-item">
+                        <img src={Search} alt="" />
+                        <span>Buscador</span>
+                    </Link>
+                    <Link to="/profile" className="buscador-footer-container-item">
+                        <img src={User} alt="" />
+                        <span>Perfil</span>
+                    </Link>
+                    <Link to="/friends" className="buscador-footer-container-item">
+                        <img src={Friends} alt="" />
+                        <span>Amigos</span>
+                    </Link>
                 </div>
 
             </div>
