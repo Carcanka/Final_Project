@@ -1,0 +1,67 @@
+.config-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* margin: 5%; */
+}
+
+.config-header{
+    display: flex;
+    align-items: center;
+    /* flex-shrink: 0; */
+    /* width: 80%; */
+    height: 40px;
+    /* background-color: aqua; */
+    justify-content: space-around;
+    margin: 5% 0;
+}
+
+.config-header button{
+    border: none;
+    background-color: transparent;
+}
+
+.button-container-apariencia{
+    width: 80%;
+    height: 40px;
+    margin: 0 10%;
+    border-radius: 0px 16px;
+    background-color: #FF8E0A;
+    color: white;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.button-container-perfil{
+    width: 80%;
+    height: 40px;
+    margin: 25px 10%;
+    border-radius: 0px 16px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+
+.logout-buttons-container{
+    margin: 50% 0 50% 0;
+}
+
+.logout-spans-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout-spans-container span{
+    margin: 10px 0px;
+}
+
+
+
+
+
