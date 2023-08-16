@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();
@@ -9,6 +10,7 @@ const middlewareAuth = require ("./middlewares/auth.middleware");
 const userRoutes = require("./routes/user.routes");
 const reqmid = require ("./middlewares/request-tracking.middleware");
 const { initalLogging, finalLogging } = require("./middlewares/loggin.middleware");
+app.use(cors());
 app.use(reqmid)
 app.use(initalLogging)
 app.use("/auth", authRoutes);

@@ -53,7 +53,7 @@ function Home() {
               <img src={HomeLogo} alt="" />
               <span>Inicio</span>
             </Link>
-            <Link to="/search" className="home-footer-container-item">
+            <Link to="/buscador" className="home-footer-container-item">
               <img src={Search} alt="" />
               <span>Buscador</span>
             </Link>
