@@ -60,6 +60,7 @@ const router = createBrowserRouter([
     path: '/perfil',
     element: <Perfil />,
   },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
