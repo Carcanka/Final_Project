@@ -21,11 +21,13 @@
 }
 
 .cupido-musical-submit{
+    color: white;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0px 16px;
-    background: #E4E6E8;
+    background: #424243;
     height: 50px;
     width: 90%;
     margin-right: 5%;
@@ -76,3 +78,15 @@
     box-shadow: 2px 2px 4px 0px rgba(8, 8, 17, 0.08), 0px 0px 5.333333492279053px 0px rgba(8, 8, 17, 0.04);
     cursor: pointer;
 }
+
+.hero-artist {
+    width: 320px;
+    color: var(--medios-tonos-gris-5, #26262E);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    }
