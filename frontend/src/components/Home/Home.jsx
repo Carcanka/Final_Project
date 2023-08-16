@@ -57,7 +57,7 @@ function Home() {
               <img src={Search} alt="" />
               <span>Buscador</span>
             </Link>
-            <Link to="/profile" className="home-footer-container-item">
+            <Link to="/perfil" className="home-footer-container-item">
               <img src={User} alt="" />
               <span>Perfil</span>
             </Link>

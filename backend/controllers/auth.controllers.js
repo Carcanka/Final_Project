@@ -5,7 +5,7 @@ const { knex } = require("../db");
 
 const sendToken = (res, next, { id, email, nombre }) => {
   const token = jwt.sign({ email, nombre, id }, secret);
-  res.cookie("authToken", token, { httpOnly: true, secure: true });
+  res.cookie("authToken", token, { httpOnly: true, secure: false });
   res.status(200);
   res.json({ mensaje: "Ingreso de usuario correcto" });
 };

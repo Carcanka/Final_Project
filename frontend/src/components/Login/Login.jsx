@@ -5,9 +5,9 @@ import Flecha from "../../assets/left-icon-placeholder.svg";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const navigate = useNavigate(); 
-  const token = localStorage.getItem("autorizacion");
-  const [form, setForm] = useState({    
+  const navigate = useNavigate();
+  // const token = localStorage.getItem("autorizacion");
+  const [form, setForm] = useState({
     email: "",
     password: "",
   });
@@ -27,12 +27,14 @@ function Login() {
       headers: myHeaders,
       body: raw,
       redirect: "follow",
+      credentials: "include",
     };
-
+   
     const res = await fetch("http://localhost:3000/auth/login", requestOptions);
     const data = await res.json();
-    localStorage.setItem("token", data.token );
-    console.log(data);
+    if (res.ok) {navigate ("/home") //hacer manejo de error
+      
+    }
   };
 
   const onInputChange = ({ target }) => {
@@ -75,9 +77,8 @@ function Login() {
             />
           </div>
 
-          <button type="submit" className="login-submit"><Link to="/home" className="footer-link">
-          Iniciar sesion
-          </Link>            
+          <button type="submit" className="login-submit">
+              Iniciar sesion            
           </button>
           <p>
             <a href="" className="reset-password">

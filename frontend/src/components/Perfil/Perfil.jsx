@@ -41,7 +41,7 @@ function Perfil() {
             <img src={Search} alt="" />
             <span>Buscador</span>
           </Link>
-          <Link to="/profile" className="buscador-footer-container-item">
+          <Link to="/perfil" className="buscador-footer-container-item">
             <img src={User} alt="" />
             <span>Perfil</span>
           </Link>
