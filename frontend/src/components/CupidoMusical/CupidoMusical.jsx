@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./CupidoMusical.css";
 import Flecha from "../../assets/left-icon-placeholder.svg";
@@ -6,6 +6,33 @@ import Like from "../../assets/like.svg";
 import Dislike from "../../assets/cross.svg";
 
 function CupidoMusical() {
+  const [songs, setSongs] = useState([]);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [likedSongs, setLikedSongs] = useState([]);
+  const [dislikedSongs, setDislikedSongs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:3000/user/musica", {credentials: "include"});
+      const json = await response.json();
+      setSongs(json.canciones);
+    };
+
+    fetchData();
+  }, []);
+
+  const handleLike = () => {
+    const likedSong = songs[currentSongIndex];
+    setLikedSongs([...likedSongs, likedSong]);
+    setCurrentSongIndex(currentSongIndex + 1);
+  };
+
+  const handleDislike = () => {
+    const dislikedSong = songs[currentSongIndex];
+    setDislikedSongs([...dislikedSongs, dislikedSong]);
+    setCurrentSongIndex(currentSongIndex + 1);
+  };
+console.log(currentSongIndex);
   return (
     <>
       <div className="cupido-musical-container">
@@ -14,7 +41,6 @@ function CupidoMusical() {
           <Link to={"/home"}>
             <img src={Flecha} alt="Ir atrás" />
           </Link>
-
           <h3>Cupido Musical</h3>
           <div></div>
         </div>
@@ -27,17 +53,17 @@ function CupidoMusical() {
           </div>
           <div className="like-cross-container">
             <div className="like">
-              <button>
+              <button onClick={handleLike}>
                 <img src={Like} alt="Like" />
               </button>
             </div>
             <div className="cross">
-              <button>
+              <button onClick={handleDislike}>
                 <img src={Dislike} alt="Dislike" />
               </button>
             </div>
           </div>
-          <span className='hero-artist'>Artista</span>
+          <span className="hero-artist">{songs[currentSongIndex]?.artista}</span>
         </div>
         <form action="">
           <input
@@ -52,3 +78,4 @@ function CupidoMusical() {
 }
 
 export default CupidoMusical;
+
