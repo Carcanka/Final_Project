@@ -10,6 +10,7 @@ function CupidoMusical() {
   const [currentSongIndex, setCurrentSongIndex] = useState(null);
   const [likedSongs, setLikedSongs] = useState([]);
   const [dislikedSongs, setDislikedSongs] = useState([]);
+  const [likedSongIds, setLikedSongIds] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,21 +32,45 @@ function CupidoMusical() {
   const handleLike = () => {
     const likedSong = songs[currentSongIndex];
     setLikedSongs([...likedSongs, likedSong]);
-    setCurrentSongIndex(getNextSongIndex());
+    setLikedSongIds([...likedSongIds, likedSong.id]);
+    setCurrentSongIndex(getNextSongIndex());    
   };
-
+ 
   const handleDislike = () => {
     const dislikedSong = songs[currentSongIndex];
     setDislikedSongs([...dislikedSongs, dislikedSong]);
     setCurrentSongIndex(getNextSongIndex());
   };
-
+  
   const getNextSongIndex = () => {
     let nextIndex = currentSongIndex + 1;
     if (nextIndex >= songs.length) {
       nextIndex = 0;
     }
     return nextIndex;
+  };
+
+  const handleOnClick = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/user/crear-playlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ likedSongIds }),
+        credentials: "include",
+      });
+      
+      if (response.ok) {
+        
+        console.log("Playlist creada exitosamente");
+      } else {
+        
+        console.error("Error al crear la playlist");
+      }
+    } catch (error) {
+      console.error("Error en la solicitud:", error);
+    }
   };
 
   return (
@@ -84,13 +109,12 @@ function CupidoMusical() {
           <span className="hero-artist">{songs[currentSongIndex]?.nombre_artista}</span>
           <span className="hero-artist">{songs[currentSongIndex]?.titulo}</span>          
         </div>
-        <form action="">
-          <input
-            type="submit"
-            className="cupido-musical-submit"
-            value="Crear Playlist"
-          />
-        </form>
+        
+          <button 
+            onClick={handleOnClick}
+            className="cupido-musical-submit" >Crear Playlist</button>           
+         
+        
       </div>
     </>
   );
