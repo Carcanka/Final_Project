@@ -43,7 +43,7 @@ const { knex } = require("../db");
 
   exports.filtroAnimo = async (req, res) => {
     try {
-      const canciones = await knex.select('animo').from('temas_musicales');
+      const canciones = await knex.select('*').from('animos');
       res.json({ canciones });
     } catch (error) {
       console.error('Error al obtener las canciones:', error);
@@ -53,7 +53,7 @@ const { knex } = require("../db");
 
   exports.filtroClima = async (req, res) => {
     try {
-      const canciones = await knex.select('clima').from('temas_musicales');
+      const canciones = await knex.select('*').from('climas');
       res.json({ canciones });
     } catch (error) {
       console.error('Error al obtener las canciones:', error);
@@ -63,7 +63,7 @@ const { knex } = require("../db");
 
   exports.filtroOcasion = async (req, res) => {
     try {
-      const canciones = await knex.select('ocasion').from('temas_musicales');
+      const canciones = await knex.select('*').from('ocasiones');
       res.json({ canciones });
     } catch (error) {
       console.error('Error al obtener las canciones:', error);

@@ -7,15 +7,22 @@ import Dislike from "../../assets/cross.svg";
 
 function CupidoMusical() {
   const [songs, setSongs] = useState([]);
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [currentSongIndex, setCurrentSongIndex] = useState(null);
   const [likedSongs, setLikedSongs] = useState([]);
   const [dislikedSongs, setDislikedSongs] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/user/musica", {credentials: "include"});
-      const json = await response.json();
-      setSongs(json.canciones);
+      try {
+        const response = await fetch("http://localhost:3000/user/musica", {
+          credentials: "include",
+        });
+        const json = await response.json();
+        setSongs(json.canciones);
+        setCurrentSongIndex(Math.floor(Math.random() * json.canciones.length));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     fetchData();
@@ -24,15 +31,23 @@ function CupidoMusical() {
   const handleLike = () => {
     const likedSong = songs[currentSongIndex];
     setLikedSongs([...likedSongs, likedSong]);
-    setCurrentSongIndex(currentSongIndex + 1);
+    setCurrentSongIndex(getNextSongIndex());
   };
 
   const handleDislike = () => {
     const dislikedSong = songs[currentSongIndex];
     setDislikedSongs([...dislikedSongs, dislikedSong]);
-    setCurrentSongIndex(currentSongIndex + 1);
+    setCurrentSongIndex(getNextSongIndex());
   };
-console.log(currentSongIndex);
+
+  const getNextSongIndex = () => {
+    let nextIndex = currentSongIndex + 1;
+    if (nextIndex >= songs.length) {
+      nextIndex = 0;
+    }
+    return nextIndex;
+  };
+
   return (
     <>
       <div className="cupido-musical-container">
@@ -47,8 +62,11 @@ console.log(currentSongIndex);
         <div className="cupido-musical-image-like-dislike">
           <div className="cupido-musical-image">
             <img
-              src="https://s3-alpha-sig.figma.com/img/8d43/dfbf/98017346dc1d5dfe56189d1607f3a9ac?Expires=1693180800&Signature=efCTJjIMZK34hS-Iw1pVhzRRW8NFTkQaUc43i7IDBiKRqfG6hG73aqTrjl6NrvwCAWNzptCeKYcj3lxNhJ5sBYKsq8bGVhZoyBCcLgk6VSjwUVIGkekaFVTq4JN65HjmiWqFUdLnWPOG-q06DjyJO8hcXkDQ4ac29gAozeigdGqKEQQa3wfbx1se2gSIi2-5pc3dD2F31XXNly4YxhPfczRGmIR18Ql1O-PGtpCiSxf1WvN5UcjNM~BZrJ1iMeHWsx3L9gwru5oZk3PGqsRjINhtlR5jUdrxl-eyYzQi3~e5Cvji1HTDd9Agn1eZwX9JQ2qEvV3JM94WehF0zadZxA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-              alt=""
+              src={new URL(
+                `../../artistas/${songs[currentSongIndex]?.artista_id}.jpg`,
+                import.meta.url
+              )}
+              alt="imagen musical"
             />
           </div>
           <div className="like-cross-container">
@@ -62,8 +80,9 @@ console.log(currentSongIndex);
                 <img src={Dislike} alt="Dislike" />
               </button>
             </div>
-          </div>
-          <span className="hero-artist">{songs[currentSongIndex]?.artista}</span>
+          </div>        
+          <span className="hero-artist">{songs[currentSongIndex]?.nombre_artista}</span>
+          <span className="hero-artist">{songs[currentSongIndex]?.titulo}</span>          
         </div>
         <form action="">
           <input

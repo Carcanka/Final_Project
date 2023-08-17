@@ -45,7 +45,10 @@
 }
 
 .cupido-musical-image img{
-    display: flex;
+    object-fit: contain;   
+    aspect-ratio: 1/1;    
+    background: #000000ed;
+    display: flex;   
     border-radius: 0px 48px;
     width: 80%;
     height: auto;
