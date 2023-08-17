@@ -14,10 +14,10 @@ const secret = "encriptado";
 exports.secret = secret;
 exports.register = async (req, res, next) => {
   const salt = await bcrypt.genSalt(10);
-  const hashPassword = await bcrypt.hash(req.body.password, salt);
-
+  const password_hash = await bcrypt.hash(req.body.password, salt);
+  const {password, ...usuarioAInsertar} = req.body 
   const usuario = await knex("usuarios")
-    .insert({ ...req.body, password: hashPassword })
+    .insert({ ...usuarioAInsertar, password_hash })
     .returning("*");
   sendToken(res, next, usuario[0]);
 };
