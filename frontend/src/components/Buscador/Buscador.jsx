@@ -24,10 +24,10 @@ function Buscador() {
   }, []);
 
   const filteredSongs = songs.filter((song) => {
-    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();    
     return (
       song.titulo.toLowerCase().includes(lowerCaseSearchTerm) ||
-      song.artista.toLowerCase().includes(lowerCaseSearchTerm)
+      song.nombre_artista.toLowerCase().includes(lowerCaseSearchTerm)
     );
   });
 
@@ -52,7 +52,7 @@ function Buscador() {
                   alt="imagen musical"
                 />
                 <h3>{song.titulo}</h3>
-                <h4>{song.artista}</h4>
+                <h4>{song.nombre_artista}</h4>
               </li>
             ))}
           </ul>
