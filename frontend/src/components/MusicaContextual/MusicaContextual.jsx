@@ -26,16 +26,16 @@ function MusicaContextual() {
     ];
     return (
         <>
-    <div className="musica-contextual-container">
-      <div className="header-gradient"></div>
-      <div className="musica-contextual-header">
-        <Link to="/home">
-          <button><img src={Flecha} alt="Ir atrás" /></button>
-        </Link>
-        <h3>Musica Contextual</h3>
-        <div></div>
-      </div>
-      <form action="">
+            <div className="musica-contextual-container">
+                <div className="header-gradient"></div>
+                <div className="musica-contextual-header">
+                    <Link to="/home">
+                        <button><img src={Flecha} alt="Ir atrás" /></button>
+                    </Link>
+                    <h3>Musica Contextual</h3>
+                    <div></div>
+                </div>
+                <form action="">
                     <div className="input-container">
                         <h2>¿Cuál es la ocasión?</h2>
                         <select id="ocasion">
@@ -78,7 +78,7 @@ function MusicaContextual() {
                             <option value="">Clima</option>
                             <option value="soleado">Soleado</option>
                             <option value="lluvioso">Lluvioso</option>
-                            <option value="noche">Noche</option>
+                            <option value="1">1</option>
                             <option value="nublado">Nublado</option>
                         </select>
 
