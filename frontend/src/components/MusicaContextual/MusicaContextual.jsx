@@ -40,14 +40,21 @@ function MusicaContextual() {
                         <h2>¿Cuál es la ocasión?</h2>
                         <select id="ocasion">
                             <option value="">Actividad</option>
-                            <option value="fiesta">Fiesta</option>
-                            <option value="amor">Amor</option>
-                            <option value="viaje">Viaje</option>
-                            <option value="concierto">Concierto</option>
-                            <option value="reflexion">Reflexión</option>
-                            <option value="tristeza">Tristeza</option>
-                            <option value="diversion">Diversión</option>
-                            <option value="relax">Relax</option>
+                            <option value="1">Fiesta</option>
+                            <option value="2">Amor</option>
+                            <option value="3">Viaje</option>
+                            <option value="4">Concierto</option>
+                            <option value="5">Reflexión</option>
+                            <option value="6">Tristeza</option>
+                            <option value="7">Diversión</option>
+                            <option value="8">Relax</option>
+                            <option value="9">Ciudad</option>
+                            <option value="10">Entrenamiento</option>
+                            <option value="11">Cannabis</option>
+                            <option value="12">Playa</option>
+                            <option value="13">Revolución</option>
+                            <option value="14">Esperanza</option>
+                            <option value="15">Naturaleza</option>
                         </select>
                     </div>
 
@@ -55,19 +62,17 @@ function MusicaContextual() {
                         <h2>¿Cómo te sientes?</h2>
                         <select id="animo">
                             <option value="">Estado de Ánimo</option>
-                            <option value="energetico">Energético</option>
-                            <option value="emocionante">Emocionante</option>
-                            <option value="animado">Animado</option>
-                            <option value="reflejo">Reflejo</option>
-                            <option value="romantico">Romántico</option>
-                            <option value="relajado">Relajado</option>
-                            <option value="melancolico">Melancólico</option>
-                            <option value="empoderado">Empoderado</option>
-                            <option value="feliz">Feliz</option>
-                            <option value="triste">Triste</option>
-                            <option value="epico">Épico</option>
-                            <option value="reflexivo">Reflexivo</option>
-                            <option value="romantico">Romántico</option>
+                            <option value="1">Energético</option>
+                            <option value="2">Emocionante</option>
+                            <option value="3">Animado</option>
+                            <option value="4">Romántico</option>
+                            <option value="5">Relajado</option>
+                            <option value="6">Melancólico</option>
+                            <option value="7">Empoderado</option>
+                            <option value="8">Feliz</option>
+                            <option value="9">Épico</option>
+                            <option value="10">Reflexivo</option>
+                            <option value="11">Motivador</option>
                         </select>
 
                     </div>
@@ -76,10 +81,9 @@ function MusicaContextual() {
                         <h2>¿Cómo está el clima?</h2>
                         <select id="clima">
                             <option value="">Clima</option>
-                            <option value="soleado">Soleado</option>
-                            <option value="lluvioso">Lluvioso</option>
-                            <option value="1">1</option>
-                            <option value="nublado">Nublado</option>
+                            <option value="1">Soleado</option>
+                            <option value="2">Lluvioso</option>
+                            <option value="3">Noche</option>
                         </select>
 
                     </div>
