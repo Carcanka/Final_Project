@@ -51,14 +51,74 @@ exports.createUser = async (req, res, next) => {
   }
   next();
 };
+
 exports.playlist = async (req, res) => {
   try {
-    const canciones = await knex.select('*').from('playlists');
-    res.json({ canciones });
+    const { ocasion, animo, clima, generos } = req.body;
+    // const { usuario } = req;
+    // console.log({ ocasion, animo, clima, generos, usuario });
+
+    let matchingTemas = await knex('temas_musicales')
+      .where(function () {
+        if (animo) {
+          this.andWhere('animo', animo);
+        }
+        if (clima) {
+          this.andWhere('clima', clima);
+        }
+        if (ocasion) {
+          this.andWhere('ocasion', ocasion);
+        }
+      })
+      .select('*');
+
+    // console.log(matchingTemas)
+
+    if (matchingTemas.length < 5) {
+      matchingTemas = await knex('temas_musicales')
+        .where(function () {
+          if (animo) {
+            this.andWhere('animo', animo);
+          }
+          if (ocasion) {
+            this.andWhere('ocasion', ocasion);
+          }
+        })
+        .select('*');
+    }
+
+    // console.log(matchingTemas)
+    // console.log("termino")
+    // console.log(usuario);
+
+    const newPlaylist = {
+      nombre: 'My Awesome Playlist',
+      usuarios_id: req.usuario.id,
+    };
+    // console.log(newPlaylist);
+
+    const playlistId = await knex('playlists')
+      .insert(newPlaylist, 'id');
+
+    const cancionesToInsert = matchingTemas.map(temaId => ({
+      titulo_cancion: temaId.id,
+      playlist_id: playlistId[0].id,
+    }));
+
+    // console.log(cancionesToInsert)
+
+    if (cancionesToInsert) {
+      await knex('canciones_playlist')
+        .insert(cancionesToInsert);
+
+    }
+    // const canciones = await knex.select('*').from('playlists');
+    res.json({
+      playlistId: playlistId[0].id,
+      canciones: matchingTemas.map(tema => (tema.id))
+    });
   } catch (error) {
     console.error('Error al obtener las canciones:', error);
     res.status(500).json({ error: 'Hubo un error al obtener las canciones.' });
   }
 };
-
-//definir la ruta para crear la playlist, recorrer req.body para recibir esa data, obtener las canciones en array e insertarlas en plylist.songs/

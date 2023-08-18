@@ -33,15 +33,15 @@ function CupidoMusical() {
     const likedSong = songs[currentSongIndex];
     setLikedSongs([...likedSongs, likedSong]);
     setLikedSongIds([...likedSongIds, likedSong.id]);
-    setCurrentSongIndex(getNextSongIndex());    
+    setCurrentSongIndex(getNextSongIndex());
   };
- 
+
   const handleDislike = () => {
     const dislikedSong = songs[currentSongIndex];
     setDislikedSongs([...dislikedSongs, dislikedSong]);
     setCurrentSongIndex(getNextSongIndex());
   };
-  
+
   const getNextSongIndex = () => {
     let nextIndex = currentSongIndex + 1;
     if (nextIndex >= songs.length) {
@@ -60,12 +60,12 @@ function CupidoMusical() {
         body: JSON.stringify({ likedSongIds }),
         credentials: "include",
       });
-      
+
       if (response.ok) {
-        
+
         console.log("Playlist creada exitosamente");
       } else {
-        
+
         console.error("Error al crear la playlist");
       }
     } catch (error) {
@@ -105,16 +105,12 @@ function CupidoMusical() {
                 <img src={Dislike} alt="Dislike" />
               </button>
             </div>
-          </div>        
+          </div>
           <span className="hero-artist">{songs[currentSongIndex]?.nombre_artista}</span>
-          <span className="hero-artist">{songs[currentSongIndex]?.titulo}</span>          
+          <span className="hero-artist">{songs[currentSongIndex]?.titulo}</span>
         </div>
-        
-          <button 
-            onClick={handleOnClick}
-            className="cupido-musical-submit" >Crear Playlist</button>           
-         
-        
+
+        <button onClick={handleOnClick} className="cupido-musical-submit" >Crear Playlist</button>
       </div>
     </>
   );
